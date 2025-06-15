@@ -163,7 +163,7 @@
             p(data-aos="fade-left").mb-4 Para el estudio de esta temática, lo invitamos a escuchar el siguiente pódcast.
     
             TarjetaAudio.color-acento-botones.bg-color-white.mb-3(
-              texto="Fundamentos de la innovación estratégica"
+              texto="La Rama Ejecutiva: estructura y funciones en el Estado colombiano"
               tiempo
               :audio="require('../../assets/curso/podcast/podcast1.mp3')"
             )
