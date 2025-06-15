@@ -17,19 +17,148 @@
 
 .bg-color
   &-1
-    background-color: #EAF8FD
+    background-color: #D2E7F2
   &-2
-    background-color: #FFFBE8
+    background-color: #4A5641
   &-3
-    background-color: #F0E9F6
+    background-color: #F9E3D4
   &-4
-    background-color: #EAF8FD
+    color: #4A5641 !important
+  &-5
+    background-color: #EAE4DC
+  &-6
+    background-color: #D2E7F2
+  &-7
+    background-color: #BCA78F
+  &-8
+    background-color: #CFD7C8
+  &-9
+    background-color: #E7F2F8
+  &-10
+    background-color: #BBDBEB
+  &-11
+    background-color: #FCF5F0
+  &-12
+    background-color: #DEF0FA
+  &-13
+    background-color: #D6F1FF
+  &-14
+    background-color: #8ECAE8
+  &-15
+    background-color: #248ABF
+  &-16
+    background-color: #134B69
+  &-17
+    background-color: #0A2839
+  &-18
+    background-color: #E7EBE3
+  &-19
+    background-color: #A1D2EA
+  &-20
+    background-color: #F7F5F3
   &-info
     background-color: #E8EEFD
   &-sintesis
     background-color: #F9F9F9
   &-white
     background-color: #fff
+////////////////FONDO COMPLETO CON POSICION/////////////////
+.bg-h85
+  position: relative
+  &::after
+    content: ''
+    position: absolute
+    bottom: 0%
+    left: 0
+    width: 100%
+    height: 90%
+    transform: translateY(-0%)
+    background-color: #F9E3D4
+    z-index: 0
+  .col-lg-12
+    z-index: 1
+  @media screen and (max-width: $bp-max-md)
+    padding: 1rem
+    &::after
+      height: 100%
+      bottom: 0
+
+.bg-h85-1
+  position: relative
+  &::after
+    content: ''
+    position: absolute
+    bottom: 35%
+    left: 0
+    width: 100%
+    height: 48%
+    transform: translateY(-0%)
+    background: linear-gradient(180deg,rgba(255, 255, 255, 1) 0%, rgba(249, 235, 225, 1) 100%)
+    z-index: 0
+  div, p
+    z-index: 1
+  @media screen and (max-width: $bp-max-md)
+    padding: 1rem
+    &::after
+      height: 100%
+      bottom: 3%
+.bg-h85-2
+  position: relative
+  &::after
+    content: ''
+    position: absolute
+    bottom: 37%
+    left: 0
+    width: 100%
+    height: 48%
+    transform: translateY(-0%)
+    background: linear-gradient(180deg,rgba(255, 255, 255, 1) 0%, rgba(187, 219, 235, 1) 100%);
+    z-index: 0
+  div
+    z-index: 1
+  @media screen and (max-width: $bp-max-md)
+    padding: 1rem
+    &::after
+      height: 100%
+      bottom: 0%
+.bg-h85-3
+  position: relative
+  &::after
+    content: ''
+    position: absolute
+    bottom: 20%
+    left: 0
+    width: 100%
+    height: 48%
+    transform: translateY(-0%)
+    background: linear-gradient(0deg,rgba(255, 255, 255, 1) 0%, rgba(249, 235, 225, 1) 100%)
+    z-index: 0
+  div
+    z-index: 1
+  @media screen and (max-width: $bp-max-md)
+    padding: 1rem
+    &::after
+      height: 100%
+      bottom: 0
+.bg-h85-4
+  position: relative
+  &::after
+    content: ''
+    position: absolute
+    bottom: 16%
+    left: 0
+    width: 100%
+    height: 27%
+    transform: translateY(-0%)
+    background: linear-gradient(0deg,rgba(255, 255, 255, 1) 0%, rgba(187, 219, 235, 1) 100%);
+    z-index: 0
+  div
+    z-index: 1
+  @media screen and (max-width: $bp-max-md)
+    padding: 1rem
+    &::after
+      height: 100%
+      bottom: 0
 
 .border-top
   &.color-primario
@@ -48,16 +177,27 @@
   @media screen and (max-width: $bp-max-sm)
     padding-left: 1.5rem
     padding-right: 1.5rem
+.bg-full-width-2
+  background-size: contain
+  background-repeat: no-repeat
+  background-position: bottom
+  margin-inline: -3.3rem
+  @media screen and (max-width: $bp-max-sm)
+    padding-left: 1.5rem
+    padding-right: 1.5rem
 
 .bg-fondo
   &-1
-    background-image: url("../assets/bg/bg1.png") !important
+    background-image: url("../assets/bg/bg1.svg") !important
     background-position: top
   &-2
-    // background-image: url("../assets/bg/bg2.png") !important
+    background-image: url("../assets/bg/bg2.svg") !important
+    background-position: bottom
+  &-3
+    background-image: url("../assets/bg/bg3.svg") !important
     background-position: bottom
   &-slider
-    background-image: url("../assets/bg/bg-slider.png") !important
+    background-image: url("../assets/bg/bg-slider.svg") !important
     background-position: bottom
 
 // Variables
@@ -97,15 +237,17 @@ $custom-card-img-height: 322px
 
 
 .acordion__header
-  background-color: lighten($color-acento-contenido, 25%) !important
+  background-color: lighten($color-secundario, 25%) !important
 
 .acordion__header--active
-  background-color: $color-acento-contenido !important
+  background-color: $color-secundario !important
   h4, i
     color: #000 !important
 
 .acordion__contenido
-  background-color: lighten($color-acento-contenido, 27%) !important
+  background-color: lighten($color-secundario, 27%) !important
+
+
 
 
 .anexo__texto
@@ -182,20 +324,20 @@ $custom-card-img-height: 322px
   span
     font-size: 0.85em
 
-.large
+.large-2
   .linea-tiempo-d__item__content__title
     padding: 28px
     border-radius: 5px 5px 0px 0px
-    background-color: lighten($color-primario, 30%)
+    background-color: #F9E3D4
   .linea-tiempo-d__item__content__title.active
-    background-color: $color-primario !important
+    background-color: $color-secundario !important
   .linea-tiempo-d__item__content__slot
     border-radius: 0px 0px 5px 5px
-    background-color: lighten($color-primario, 37%) !important
+    background-color: #FCF5F0
   .linea-tiempo-d__item__number
-    background-color: lighten($color-primario, 30%)
+    background-color: #F9E3D4
   .linea-tiempo-d__item--selected .linea-tiempo-d__item__number
-    background-color: $color-primario !important
+    background-color: $color-secundario !important
   .linea-tiempo-d__item__dots:after
     border-left: 0px
   .fa-angle-up, .fa-angle-down
@@ -209,16 +351,7 @@ $custom-card-img-height: 322px
     font-size: 1rem !important
   a
     text-decoration: none
-    color: $color-sistema-texto
-
-
-
-.lista-ul--color li > i:first-of-type
-  color: #453179 !important
-
-.lista-ul--color.color-dark li > i:first-of-type
-  color: #453179 !important
-          
+    color: $color-sistema-texto  
 
 th.bg-color-tabla
   background-color: #453179 !important
